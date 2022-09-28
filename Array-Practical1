@@ -63,13 +63,13 @@ start:
         scanf("%d", &value);
         scanf("%d", &pos);
 
-        newsize = insert(arr, n, value, pos);
+        newsize = insert(arr, newsize, value, pos);
         for (i = 0; i < newsize; i++)
         {
             printf("%d ", arr[i]);
         }
         printf("\n");
-        system("cls");
+        
         goto start;
     }
      else if (key == 's')
@@ -77,7 +77,7 @@ start:
         printf("enter value to search");
         scanf("%d", &value);
         search(value, arr,n);
-        system("cls");
+        
         goto start;
     }
     else 
@@ -85,13 +85,13 @@ start:
         printf("enter pos");
 
         scanf("%d", &pos);
-        newsize = delet(arr, n, pos);
+        newsize = delet(arr, newsize, pos);
 
         for (i = 0; i < newsize; i++)
         {
             printf("%d ", arr[i]);
         }
-        system("cls");
+    
         goto start;
     }
     return 0;
